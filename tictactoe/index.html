@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Tic Tac Toe</title>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/aimanager.js"></script>
+<script type="text/javascript" src="js/boardmanager.js"></script>
+<script type="text/javascript" src="js/gamemanager.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<!-- this fires when all the page's content, including the dynamic CSS, finishes loading -->
+<script>
+function showGameBoard() {
+    $("#main").show();
+}
+</script>
+
+</head>
+
+<body onload="showGameBoard()">
+<!--
+NOTE: the main content of the page is hidden by default, this allows for dynamic loading of CSS without 
+the momentary flash of unstyled divs
+-->
+<div id="main" style="display:none;">
+<div id="game">
+    <table id="gameBoard">
+    <tr>
+    <td class="spot ticText"></td>
+    <td class="spot ticText"></td>
+    <td class="spot ticText"></td>
+    </tr>
+    <tr>
+    <td class="spot ticText"></td>
+    <td class="spot ticText"></td>
+    <td class="spot ticText"></td>
+    </tr>
+    <tr>
+    <td class="spot ticText"></td>
+    <td class="spot ticText"></td>
+    <td class="spot ticText"></td>
+    </tr>
+    </table>
+    <input id="playAgainButton" class="ticButton ticText" type="submit" value="Reset">
+    <div id="humanWin" class="gameOverMessage ticText">You Won! ... wait, how did that happen?</div>
+    <div id="cpuWin" class="gameOverMessage ticText">The Computer Won!</div>
+    <div id="draw" class="gameOverMessage ticText">Draw!</div>
+</div>
+</div>
+</body>
+
+</html>
